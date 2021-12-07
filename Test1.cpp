@@ -1,14 +1,17 @@
 #include <iostream>
 using namespace std;
 
+void direBonjour()
+{
+    cout << "Bonjour !" << endl;
+    //Comme rien ne ressort, il n'y a pas de return !
+}
+
 int main()
 {
-    int compteur(0);
-
-    for (compteur = 0 ; compteur < 10 ; compteur+=3)
-    {
-        cout << compteur << endl;
-    }
-
+    direBonjour();
+    //Comme la fonction ne renvoie rien
+    //On l'appelle sans mettre la valeur de retour dans une variable
+    
     return 0;
 }
