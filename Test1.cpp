@@ -1,14 +1,14 @@
-#include <iostream> //charge la fonctionnalité bibliothèque
-
+#include <iostream>
 using namespace std;
 
 int main()
 {
-    int nbEnfants(-1);
-    while (nbEnfants < 0)
+    int compteur(0);
+
+    for (compteur = 0 ; compteur < 10 ; compteur+=3)
     {
-        cout << "Vous n'avez pas d'enfant" << endl;
-        cin >> nbEnfants;
+        cout << compteur << endl;
     }
-    cout << "Oh vous avez des enfants" << endl;
+
+    return 0;
 }
