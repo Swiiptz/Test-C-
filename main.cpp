@@ -1,21 +1,23 @@
 #include <iostream>
+#include <vector>
 using namespace std;
 
 int main()
 {
     int input;
     double tempNotes;
-    cout << "Nombre de note" << endl;
+    cout << "Programme de moyenne, Dev ++, vector system." << endl;
+    cout << "Nombre de notes :" << endl;
     cin >> input;
     int const nombreNotes(input);
-    double notes[nombreNotes];
+    vector<double> notes;
     for (int i(0); i < nombreNotes; i+=1)
     {
-        cout << "Note" << i+1 << ": " << endl;
+        cout << "Note " << i+1 << ": " << endl;
         cin >> tempNotes;
-        notes[i] = tempNotes;
+        notes.push_back(tempNotes);
     }
-    double moyenne(0);
+    double moyenne;
     for(int i(0); i<nombreNotes; ++i)
     {
         moyenne += notes[i];   //On additionne toutes les notes
@@ -23,7 +25,7 @@ int main()
     moyenne /= nombreNotes;
     if (moyenne < 10)
     {
-        cout << "Moyenne nul ! Cheh, retourne en 6eme NOOB, ta moyenne pas ouf :" << moyenne <<endl;
+        cout << "Moyenne nul ! Cheh, retourne en 6eme NOOB, ta moyenne pas ouf : " << moyenne <<endl;
     }
     else
     {
